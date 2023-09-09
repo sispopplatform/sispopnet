@@ -6,7 +6,7 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace network.loki.lokinet.win32.ui
+namespace network.sispop.sispopnet.win32.ui
 {
     partial class AboutBox : Form
     {

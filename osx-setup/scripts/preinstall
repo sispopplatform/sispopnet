@@ -1,8 +1,8 @@
 #!/bin/sh
-echo "Running preinstall" > /tmp/lokinet_preinstall.log
-if [ ! -d "$HOME/.lokinet" ]
+echo "Running preinstall" > /tmp/sispopnet_preinstall.log
+if [ ! -d "$HOME/.sispopnet" ]
 then
-  mkdir $HOME/.lokinet >> /tmp/lokinet_preinstall.log
+  mkdir $HOME/.sispopnet >> /tmp/sispopnet_preinstall.log
 fi
-find $HOME/.lokinet >> /tmp/lokinet_preinstall.log
+find $HOME/.sispopnet >> /tmp/sispopnet_preinstall.log
 exit 0 # all good

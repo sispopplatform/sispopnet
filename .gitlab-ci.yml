@@ -18,7 +18,7 @@ stages:
 #    - make STATIC_LINK=ON DOWNLOAD_SODIUM=ON
 #  artifacts:
 #    paths:
-#      - "lokinet"
+#      - "sispopnet"
 
 # we'll just try our travis set up for now
 build:linux_release:
@@ -34,18 +34,18 @@ build:linux_release:
   script:
     - make static DOWNLOAD_SODIUM=ON
     # alternatively: git describe --tag
-    - LOKINET_VERSION=$(./lokinet-static --version|sed s/lokinet-//)
-    - echo lokinet-linux-x64-v$LOKINET_VERSION
-    - mkdir lokinet-linux-x64-v$LOKINET_VERSION
-    - cp lokinet-bootstrap lokinet-linux-x64-v$LOKINET_VERSION
-    - cp build/daemon/lokinet lokinet-linux-x64-v$LOKINET_VERSION
-    - cp build/daemon/lokinetctl lokinet-linux-x64-v$LOKINET_VERSION
-    - cp docs/linux-setcap-readme.txt lokinet-linux-x64-v$LOKINET_VERSION
-    - tar cJf lokinet-linux-x64-v$LOKINET_VERSION.tar.xz lokinet-linux-x64-v$LOKINET_VERSION
-    - echo "lokinet-linux-x64-v$LOKINET_VERSION.tar.xz should be ready"
+    - SISPOPNET_VERSION=$(./sispopnet-static --version|sed s/sispopnet-//)
+    - echo sispopnet-linux-x64-v$SISPOPNET_VERSION
+    - mkdir sispopnet-linux-x64-v$SISPOPNET_VERSION
+    - cp sispopnet-bootstrap sispopnet-linux-x64-v$SISPOPNET_VERSION
+    - cp build/daemon/sispopnet sispopnet-linux-x64-v$SISPOPNET_VERSION
+    - cp build/daemon/sispopnetctl sispopnet-linux-x64-v$SISPOPNET_VERSION
+    - cp docs/linux-setcap-readme.txt sispopnet-linux-x64-v$SISPOPNET_VERSION
+    - tar cJf sispopnet-linux-x64-v$SISPOPNET_VERSION.tar.xz sispopnet-linux-x64-v$SISPOPNET_VERSION
+    - echo "sispopnet-linux-x64-v$SISPOPNET_VERSION.tar.xz should be ready"
   artifacts:
     paths:
-      - lokinet-linux-x64-v*.tar.xz
+      - sispopnet-linux-x64-v*.tar.xz
 
 build:linux_debug:
   image: ubuntu:xenial
@@ -61,8 +61,8 @@ build:linux_debug:
     - DOWNLOAD_SODIUM=ON IS_NOTIFICATION=1 STATIC_LINK=OFF make
   artifacts:
     paths:
-      - build/daemon/lokinet
-      - build/daemon/lokinetctl
+      - build/daemon/sispopnet
+      - build/daemon/sispopnetctl
 
 # needs libuv and libcurl
 #build:freebsd:
@@ -73,9 +73,9 @@ build:linux_debug:
 #    - gmake DOWNLOAD_SODIUM=ON
 #  artifacts:
 #    paths:
-#      - "lokinet"
+#      - "sispopnet"
 
-# need windows runner on lokiproject
+# need windows runner on sispopproject
 #build:windows:
 #  tags:
 #    - windows
@@ -87,4 +87,4 @@ build:linux_debug:
 #    - cmake .. -G Ninja -DCMAKE_TOOLCHAIN_FILE=../contrib/cross/mingw[32].cmake  -DDOWNLOAD_SODIUM=ON
 #  artifacts:
 #    paths:
-#      - "lokinet.exe"
+#      - "sispopnet.exe"

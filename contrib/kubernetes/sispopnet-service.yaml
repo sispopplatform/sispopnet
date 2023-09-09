@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: sispopnet
+  labels:
+    app: sispopnet
+spec:
+  selector:
+    app: sispopnet
+  ports:
+  - protocol: UDP
+    port: 1090
+    targetPort: 1090

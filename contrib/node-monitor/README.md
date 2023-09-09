@@ -1,6 +1,6 @@
 # Building / Running
 
-after building lokinet
+after building sispopnet
 
 ```
 cd contrib/node-monitor
@@ -12,7 +12,7 @@ and wait 30 minutes for final score
 
 # Scoring
 
-Lokinet gets a point for everything it does correctly.
+Sispopnet gets a point for everything it does correctly.
 
 Currently:
 - succesful ping to snode (1 per second after a snode is discovered)

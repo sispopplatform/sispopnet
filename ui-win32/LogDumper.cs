@@ -1,17 +1,17 @@
-﻿using network.loki.lokinet.win32.ui.Properties;
+﻿using network.sispop.sispopnet.win32.ui.Properties;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading;
 
-namespace network.loki.lokinet.win32.ui
+namespace network.sispop.sispopnet.win32.ui
 {
 
     class LogDumper
     {
         private const string LogFolderName = "logs";
-        private const string LogFileName = "lokinet.log";
+        private const string LogFileName = "sispopnet.log";
         private string tmp;
         private string LogPath;
 

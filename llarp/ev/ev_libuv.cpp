@@ -777,7 +777,7 @@ namespace libuv
     if(uv_loop_init(&m_Impl) == -1)
       return false;
 
-#ifdef LOKINET_DEBUG
+#ifdef SISPOPNET_DEBUG
     last_time      = 0;
     loop_run_count = 0;
 #endif

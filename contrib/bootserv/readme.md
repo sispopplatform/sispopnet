@@ -1,4 +1,4 @@
-# lokinet-bootserv
+# sispopnet-bootserv
 
 cgi executable for serving a random RC for bootstrap from a nodedb
 
@@ -6,7 +6,7 @@ cgi executable for serving a random RC for bootstrap from a nodedb
 
 copy the example config (privileged)
 
-    # cp configs/lokinet-bootserv.ini /usr/local/etc/lokinet-bootserv.ini
+    # cp configs/sispopnet-bootserv.ini /usr/local/etc/sispopnet-bootserv.ini
     
 edit config to have proper values, 
 specifically  make sure the `[nodedb]` section has a `dir` value that points to a static copy of a healthy nodedb
@@ -21,15 +21,15 @@ to build:
 
 install cgi binary:
 
-    # cp lokinet-bootserv /usr/local/bin/lokinet-bootserv 
+    # cp sispopnet-bootserv /usr/local/bin/sispopnet-bootserv 
 
 set up with nginx cgi:
 
-    # cp configs/lokinet-bootserv-nginx.conf /etc/nginx/sites-available/lokinet-bootserv.conf
-    # ln -s /etc/nginx/sites-available/lokinet-bootserv.conf /etc/nginx/sites-enabled/ 
+    # cp configs/sispopnet-bootserv-nginx.conf /etc/nginx/sites-available/sispopnet-bootserv.conf
+    # ln -s /etc/nginx/sites-available/sispopnet-bootserv.conf /etc/nginx/sites-enabled/ 
 
 ## maintainence
 
 add the following to crontab
 
-    0 0 * * * /usr/local/bin/lokinet-bootserv --cron
+    0 0 * * * /usr/local/bin/sispopnet-bootserv --cron

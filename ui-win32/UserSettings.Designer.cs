@@ -1,4 +1,4 @@
-﻿namespace network.loki.lokinet.win32.ui
+﻿namespace network.sispop.sispopnet.win32.ui
 {
     partial class UserSettingsForm
     {

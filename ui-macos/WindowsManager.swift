@@ -1,8 +1,8 @@
 //
 //  WindowsManager.swift
-//  lokinet
+//  sispopnet
 //
-//  Copyright © 2019 Loki. All rights reserved.
+//  Copyright © 2019 Sispop. All rights reserved.
 //
 
 import AppKit

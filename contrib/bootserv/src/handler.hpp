@@ -1,9 +1,9 @@
-#ifndef LOKINET_BOOTSERV_HANDLER_HPP
-#define LOKINET_BOOTSERV_HANDLER_HPP
+#ifndef SISPOPNET_BOOTSERV_HANDLER_HPP
+#define SISPOPNET_BOOTSERV_HANDLER_HPP
 #include <iostream>
-#include "lokinet-config.hpp"
+#include "sispopnet-config.hpp"
 
-namespace lokinet
+namespace sispopnet
 {
   namespace bootserv
   {
@@ -38,6 +38,6 @@ namespace lokinet
     NewCronHandler(std::ostream& out);
 
   }  // namespace bootserv
-}  // namespace lokinet
+}  // namespace sispopnet
 
 #endif

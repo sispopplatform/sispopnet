@@ -2,10 +2,10 @@
 {
   "targets": [
     {
-      "target_name": "lokinet",
+      "target_name": "sispopnet",
       "cflags!": [ "-fno-exceptions" ],
       "cflags_cc!": [ "-fno-exceptions" ],
-      "sources": [ "lokinet.cc" ],
+      "sources": [ "sispopnet.cc" ],
       "include_dirs": [
         "<!@(node -p \"require('node-addon-api').include\")"
       ],

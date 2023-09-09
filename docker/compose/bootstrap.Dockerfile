@@ -1,8 +1,8 @@
 FROM compose-base:latest
 
-ENV LOKINET_NETID=docker
+ENV SISPOPNET_NETID=docker
 
-COPY ./docker/compose/bootstrap.ini /root/.lokinet/lokinet.ini
+COPY ./docker/compose/bootstrap.ini /root/.sispopnet/sispopnet.ini
 
-CMD ["/lokinet"]
+CMD ["/sispopnet"]
 EXPOSE 1090/udp 1190/tcp

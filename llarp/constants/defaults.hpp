@@ -12,18 +12,18 @@
 #endif
 
 #ifdef DEBIAN
-#ifndef DEFAULT_LOKINET_USER
-#define DEFAULT_LOKINET_USER "debian-lokinet"
+#ifndef DEFAULT_SISPOPNET_USER
+#define DEFAULT_SISPOPNET_USER "debian-sispopnet"
 #endif
-#ifndef DEFAULT_LOKINET_GROUP
-#define DEFAULT_LOKINET_GROUP "debian-lokinet"
+#ifndef DEFAULT_SISPOPNET_GROUP
+#define DEFAULT_SISPOPNET_GROUP "debian-sispopnet"
 #endif
 #else
-#ifndef DEFAULT_LOKINET_USER
-#define DEFAULT_LOKINET_USER "lokinet"
+#ifndef DEFAULT_SISPOPNET_USER
+#define DEFAULT_SISPOPNET_USER "sispopnet"
 #endif
-#ifndef DEFAULT_LOKINET_GROUP
-#define DEFAULT_LOKINET_GROUP "lokinet"
+#ifndef DEFAULT_SISPOPNET_GROUP
+#define DEFAULT_SISPOPNET_GROUP "sispopnet"
 #endif
 #endif
 

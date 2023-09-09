@@ -199,7 +199,7 @@ namespace llarp
       // TLS needs X509/ASN.1-DER and opting into the Root CA Cabal
       // thankfully mozilla added a backdoor that allows ISPs to turn it off
       // so we disable DoH for firefox using mozilla's ISP backdoor
-      // see: https://github.com/loki-project/loki-network/issues/832
+      // see: https://github.com/sispop-project/sispop-network/issues/832
       for(const auto& q : msg.questions)
       {
         // is this firefox looking for their backdoor record?

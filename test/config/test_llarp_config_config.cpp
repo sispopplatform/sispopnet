@@ -20,15 +20,15 @@ TEST(Config, sample_config)
 # number of crypto worker threads
 threads=4
 # path to store signed RC
-contact-file=/home/lokinet/1/self.signed
+contact-file=/home/sispopnet/1/self.signed
 # path to store transport private key
-transport-privkey=/home/lokinet/1/transport.private
+transport-privkey=/home/sispopnet/1/transport.private
 # path to store identity signing key
-ident-privkey=/home/lokinet/1/identity.private
+ident-privkey=/home/sispopnet/1/identity.private
 # encryption key for onion routing
-encryption-privkey=/home/lokinet/1/encryption.private
+encryption-privkey=/home/sispopnet/1/encryption.private
 
-# uncomment following line to set router nickname to 'lokinet'
+# uncomment following line to set router nickname to 'sispopnet'
 netid=bunny
 
 [logging]
@@ -49,9 +49,9 @@ bind=127.0.0.1:1190
 
 # system settings for privileges and such
 [system]
-user=lokinet
-group=lokinet
-pidfile=/home/lokinet/1/lokinet.pid
+user=sispopnet
+group=sispopnet
+pidfile=/home/sispopnet/1/sispopnet.pid
 
 # dns provider configuration section
 [dns]
@@ -62,17 +62,17 @@ bind=127.0.1.1:53
 # network database settings block
 [netdb]
 # directory for network database skiplist storage
-dir=/home/lokinet/1/netdb
+dir=/home/sispopnet/1/netdb
 
 # bootstrap settings
 [bootstrap]
 # add a bootstrap node's signed identity to the list of nodes we want to bootstrap from
 # if we don't have any peers we connect to this router
-add-node=/home/lokinet/1/bootstrap.signed
+add-node=/home/sispopnet/1/bootstrap.signed
 
 # snapps configuration section
 [services]# uncomment next line to enable a snapp
-#example-snapp=/home/lokinet/1/snapp-example.ini
+#example-snapp=/home/sispopnet/1/snapp-example.ini
 
 [bind]
 eth0=5501
@@ -103,5 +103,5 @@ ifaddr=10.101.0.1/16
   }
 
   ASSERT_THAT(config.bootstrap.routers,
-              ElementsAre("/home/lokinet/1/bootstrap.signed"));
+              ElementsAre("/home/sispopnet/1/bootstrap.signed"));
 }

@@ -2,7 +2,7 @@
 SRC = $(sort $(wildcard src/*.cpp))
 OBJS = $(SRC:.cpp=.cpp.o)
 
-CGI_EXE = lokinet-bootserv
+CGI_EXE = sispopnet-bootserv
 
 CXX = clang++
 

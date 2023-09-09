@@ -40,9 +40,9 @@ extern "C"
   void
   llarp_config_free(struct llarp_config *);
 
-  /// packet writer to send packets to lokinet internals
+  /// packet writer to send packets to sispopnet internals
   struct llarp_vpn_writer_pipe;
-  /// packet reader to recv packets from lokinet internals
+  /// packet reader to recv packets from sispopnet internals
   struct llarp_vpn_reader_pipe;
 
   /// vpn io api
@@ -55,10 +55,10 @@ extern "C"
     void *impl;
     /// user data
     void *user;
-    /// hook set by user called by lokinet core when lokinet is done with the
+    /// hook set by user called by sispopnet core when sispopnet is done with the
     /// vpn io
     void (*closed)(struct llarp_vpn_io *);
-    /// hook set by user called from lokinet core after attempting to inject
+    /// hook set by user called from sispopnet core after attempting to inject
     /// into endpoint passed a bool set to true if we were injected otherwise
     /// set to false
     void (*injected)(struct llarp_vpn_io *, bool);
@@ -66,7 +66,7 @@ extern "C"
     void (*tick)(struct llarp_vpn_io *);
   };
 
-  /// info about the network interface that we give to lokinet core
+  /// info about the network interface that we give to sispopnet core
   struct llarp_vpn_ifaddr_info
   {
     /// name of the network interface
@@ -82,24 +82,24 @@ extern "C"
   bool
   llarp_vpn_io_init(struct llarp_main *m, struct llarp_vpn_io *io);
 
-  /// get the packet pipe for writing IP packets to lokinet internals
+  /// get the packet pipe for writing IP packets to sispopnet internals
   /// returns nullptr if llarp_vpn_io is nullptr or not initialized
   struct llarp_vpn_pkt_writer *
   llarp_vpn_io_packet_writer(struct llarp_vpn_io *io);
 
-  /// get the packet pipe for reading IP packets from lokinet internals
+  /// get the packet pipe for reading IP packets from sispopnet internals
   /// returns nullptr if llarp_vpn_io is nullptr or not initialized
   struct llarp_vpn_pkt_reader *
   llarp_vpn_io_packet_reader(struct llarp_vpn_io *io);
 
-  /// blocking read on packet reader from lokinet internals
+  /// blocking read on packet reader from sispopnet internals
   /// returns -1 on error, returns size of packet read
   /// thread safe
   ssize_t
   llarp_vpn_io_readpkt(struct llarp_vpn_pkt_reader *r, unsigned char *dst,
                        size_t dstlen);
 
-  /// blocking write on packet writer to lokinet internals
+  /// blocking write on packet writer to sispopnet internals
   /// returns false if we can't write this packet
   /// return true if we wrote this packet
   /// thread safe

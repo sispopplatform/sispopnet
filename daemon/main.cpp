@@ -1,7 +1,7 @@
 #include <config/config.hpp>  // for ensure_config
 #include <constants/version.hpp>
 #include <llarp.hpp>
-#include <util/lokinet_init.h>
+#include <util/sispopnet_init.h>
 #include <util/fs.hpp>
 #include <util/logging/logger.hpp>
 #include <util/logging/ostream_logger.hpp>
@@ -44,7 +44,7 @@ startWinsock()
     perror("Failed to start Windows Sockets");
     return err;
   }
-  ::CreateMutex(nullptr, FALSE, "lokinet_win32_daemon");
+  ::CreateMutex(nullptr, FALSE, "sispopnet_win32_daemon");
   return 0;
 }
 
@@ -84,7 +84,7 @@ run_main_context(std::string conffname, llarp_main_runtime_opts opts)
 int
 main(int argc, char *argv[])
 {
-  auto result = Lokinet_INIT();
+  auto result = Sispopnet_INIT();
   if(result)
   {
     return result;
@@ -103,8 +103,8 @@ main(int argc, char *argv[])
   // SetUnhandledExceptionFilter(win32_signal_handler);
 #endif
 
-  cxxopts::Options options("lokinet",
-                           "LokiNET is a free, open source, private, "
+  cxxopts::Options options("sispopnet",
+                           "SispopNET is a free, open source, private, "
                            "decentralized, \"market based sybil resistant\" "
                            "and IP based onion routing network");
   options.add_options()("v,verbose", "Verbose", cxxopts::value< bool >())(
@@ -236,7 +236,7 @@ main(int argc, char *argv[])
     llarp::LogDebug("Find or create ", basepath.string());
     std::error_code ec;
     // These paths are guaranteed to exist - $APPDATA or $HOME
-    // so only create .lokinet/*
+    // so only create .sispopnet/*
     if(!fs::create_directory(basepath, ec))
     {
       if(ec)
@@ -265,7 +265,7 @@ main(int argc, char *argv[])
   auto ftr = exit_code.get_future();
   do
   {
-    // do periodic non lokinet related tasks here
+    // do periodic non sispopnet related tasks here
     if(ctx != nullptr)
     {
       auto ctx_pp = llarp::Context::Get(ctx);

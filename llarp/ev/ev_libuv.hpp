@@ -138,7 +138,7 @@ namespace libuv
     using AtomicQueue_t = llarp::thread::Queue< std::function< void(void) > >;
     AtomicQueue_t m_LogicCalls;
 
-#ifdef LOKINET_DEBUG
+#ifdef SISPOPNET_DEBUG
     uint64_t last_time;
     uint64_t loop_run_count;
 #endif

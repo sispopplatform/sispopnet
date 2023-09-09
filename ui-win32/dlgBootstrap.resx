@@ -160,7 +160,7 @@
     <value>1</value>
   </data>
   <data name="uriBox.Text" xml:space="preserve">
-    <value>https://seed.lokinet.org/lokinet.signed</value>
+    <value>https://seed.sispopnet.org/sispopnet.signed</value>
   </data>
   <data name="&gt;&gt;uriBox.Name" xml:space="preserve">
     <value>uriBox</value>
@@ -187,7 +187,7 @@
     <value>2</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>This file is automatically saved as $APPDATA\.lokinet\bootstrap.signed.</value>
+    <value>This file is automatically saved as $APPDATA\.sispopnet\bootstrap.signed.</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>

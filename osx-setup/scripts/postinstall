@@ -1,20 +1,20 @@
 #!/bin/sh
-echo "Running postinstall" > /tmp/lokinet_postinstall.log
+echo "Running postinstall" > /tmp/sispopnet_postinstall.log
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
-rm $HOME/.lokinet/*.signed >> /tmp/lokinet_postinstall.log
-rm $HOME/.lokinet/*.key >> /tmp/lokinet_postinstall.log
-rm $HOME/.lokinet/*.private >> /tmp/lokinet_postinstall.log
-rm -fr $HOME/.lokinet/netdb >> /tmp/lokinet_postinstall.log
+rm $HOME/.sispopnet/*.signed >> /tmp/sispopnet_postinstall.log
+rm $HOME/.sispopnet/*.key >> /tmp/sispopnet_postinstall.log
+rm $HOME/.sispopnet/*.private >> /tmp/sispopnet_postinstall.log
+rm -fr $HOME/.sispopnet/netdb >> /tmp/sispopnet_postinstall.log
 
-/usr/local/bin/lokinet -g >> /tmp/lokinet_postinstall.log
+/usr/local/bin/sispopnet -g >> /tmp/sispopnet_postinstall.log
 
-url="https://seed.lokinet.org/bootstrap.signed"
-echo "downloading $url" >> /tmp/lokinet_postinstall.log
-echo "to $HOME/.lokinet/bootstrap.signed" >> /tmp/lokinet_postinstall.log
+url="https://seed.sispopnet.org/bootstrap.signed"
+echo "downloading $url" >> /tmp/sispopnet_postinstall.log
+echo "to $HOME/.sispopnet/bootstrap.signed" >> /tmp/sispopnet_postinstall.log
 
 # use temp file to not overrwrite existing bootstrap file on fail
 tmp=/tmp/bootstrap.tmp
@@ -22,8 +22,8 @@ tmp=/tmp/bootstrap.tmp
 # MacOS does not have wget without homebrew but does have curl
 # Rick also had indicated most BSDs have curl too
 curl "$url" > "$tmp" && \
-    (mv "$tmp" "$HOME/.lokinet/bootstrap.signed" && echo "${GREEN}lokinet successfully bootstrapped${NC}" >> /tmp/lokinet_postinstall.log) \
-        || echo "${RED}failed to download bootstrap from $url${NC}" >> /tmp/lokinet_postinstall.log
+    (mv "$tmp" "$HOME/.sispopnet/bootstrap.signed" && echo "${GREEN}sispopnet successfully bootstrapped${NC}" >> /tmp/sispopnet_postinstall.log) \
+        || echo "${RED}failed to download bootstrap from $url${NC}" >> /tmp/sispopnet_postinstall.log
 rm -f "$tmp"
 
 exit 0 # all good

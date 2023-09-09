@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7B28BD1A232EA8B40073B955 /* DNSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B28BD19232EA8B40073B955 /* DNSManager.swift */; };
+		7B28BD1C232EB6EF0073B955 /* SispopnetRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B28BD1B232EB6EF0073B955 /* SispopnetRunner.swift */; };
+		7BA4FB642340D5940098E20A /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA4FB632340D5940098E20A /* Preferences.swift */; };
+		7BA4FB662340DA820098E20A /* StatusMenuExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA4FB652340DA820098E20A /* StatusMenuExt.swift */; };
+		7BA4FB6C2340F2270098E20A /* WindowsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA4FB6B2340F2270098E20A /* WindowsManager.swift */; };
+		7BA4FB7023411FF60098E20A /* PrefsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA4FB6E23411FF60098E20A /* PrefsViewController.swift */; };
+		7BA4FB7323412D700098E20A /* Interfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA4FB7223412D700098E20A /* Interfaces.swift */; };
+		7BED5B7A232D78D900DF603F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED5B79232D78D900DF603F /* AppDelegate.swift */; };
+		7BED5B7E232D78DB00DF603F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BED5B7D232D78DB00DF603F /* Assets.xcassets */; };
+		7BED5B81232D78DB00DF603F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BED5B7F232D78DB00DF603F /* Main.storyboard */; };
+		7BED5B8D232D78DB00DF603F /* sispopnetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED5B8C232D78DB00DF603F /* sispopnetTests.swift */; };
+		7BED5B98232D78DB00DF603F /* sispopnetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED5B97232D78DB00DF603F /* sispopnetUITests.swift */; };
+		7BED5BA6232E7E6600DF603F /* SispopnetLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED5BA5232E7E6600DF603F /* SispopnetLog.swift */; };
+		7BED5BA8232E831B00DF603F /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED5BA7232E831B00DF603F /* StreamReader.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7BED5B89232D78DB00DF603F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BED5B6E232D78D900DF603F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BED5B75232D78D900DF603F;
+			remoteInfo = sispopnet;
+		};
+		7BED5B94232D78DB00DF603F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BED5B6E232D78D900DF603F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BED5B75232D78D900DF603F;
+			remoteInfo = sispopnet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7B28BD19232EA8B40073B955 /* DNSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSManager.swift; sourceTree = "<group>"; };
+		7B28BD1B232EB6EF0073B955 /* SispopnetRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SispopnetRunner.swift; sourceTree = "<group>"; };
+		7BA4FB632340D5940098E20A /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		7BA4FB652340DA820098E20A /* StatusMenuExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMenuExt.swift; sourceTree = "<group>"; };
+		7BA4FB6B2340F2270098E20A /* WindowsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowsManager.swift; sourceTree = "<group>"; };
+		7BA4FB6E23411FF60098E20A /* PrefsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsViewController.swift; sourceTree = "<group>"; };
+		7BA4FB7223412D700098E20A /* Interfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interfaces.swift; sourceTree = "<group>"; };
+		7BED5B76232D78D900DF603F /* sispopnet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sispopnet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BED5B79232D78D900DF603F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7BED5B7D232D78DB00DF603F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7BED5B80232D78DB00DF603F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7BED5B82232D78DB00DF603F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BED5B83232D78DB00DF603F /* sispopnet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sispopnet.entitlements; sourceTree = "<group>"; };
+		7BED5B88232D78DB00DF603F /* sispopnetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sispopnetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BED5B8C232D78DB00DF603F /* sispopnetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sispopnetTests.swift; sourceTree = "<group>"; };
+		7BED5B8E232D78DB00DF603F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BED5B93232D78DB00DF603F /* sispopnetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sispopnetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BED5B97232D78DB00DF603F /* sispopnetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sispopnetUITests.swift; sourceTree = "<group>"; };
+		7BED5B99232D78DB00DF603F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BED5BA5232E7E6600DF603F /* SispopnetLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SispopnetLog.swift; sourceTree = "<group>"; };
+		7BED5BA7232E831B00DF603F /* StreamReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamReader.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7BED5B73232D78D900DF603F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BED5B85232D78DB00DF603F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BED5B90232D78DB00DF603F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7BED5B6D232D78D900DF603F = {
+			isa = PBXGroup;
+			children = (
+				7BA4FB6B2340F2270098E20A /* WindowsManager.swift */,
+				7BED5B78232D78D900DF603F /* sispopnet */,
+				7BED5B8B232D78DB00DF603F /* sispopnetTests */,
+				7BED5B96232D78DB00DF603F /* sispopnetUITests */,
+				7BED5B77232D78D900DF603F /* Products */,
+				7BED5BA9232E993E00DF603F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7BED5B77232D78D900DF603F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BED5B76232D78D900DF603F /* sispopnet.app */,
+				7BED5B88232D78DB00DF603F /* sispopnetTests.xctest */,
+				7BED5B93232D78DB00DF603F /* sispopnetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BED5B78232D78D900DF603F /* sispopnet */ = {
+			isa = PBXGroup;
+			children = (
+				7BED5B79232D78D900DF603F /* AppDelegate.swift */,
+				7BA4FB652340DA820098E20A /* StatusMenuExt.swift */,
+				7BA4FB632340D5940098E20A /* Preferences.swift */,
+				7BA4FB6E23411FF60098E20A /* PrefsViewController.swift */,
+				7BED5B7D232D78DB00DF603F /* Assets.xcassets */,
+				7BED5B7F232D78DB00DF603F /* Main.storyboard */,
+				7BED5B82232D78DB00DF603F /* Info.plist */,
+				7BED5B83232D78DB00DF603F /* sispopnet.entitlements */,
+				7BED5BA5232E7E6600DF603F /* SispopnetLog.swift */,
+				7B28BD19232EA8B40073B955 /* DNSManager.swift */,
+				7BED5BA7232E831B00DF603F /* StreamReader.swift */,
+				7B28BD1B232EB6EF0073B955 /* SispopnetRunner.swift */,
+				7BA4FB7223412D700098E20A /* Interfaces.swift */,
+			);
+			path = sispopnet;
+			sourceTree = "<group>";
+		};
+		7BED5B8B232D78DB00DF603F /* sispopnetTests */ = {
+			isa = PBXGroup;
+			children = (
+				7BED5B8C232D78DB00DF603F /* sispopnetTests.swift */,
+				7BED5B8E232D78DB00DF603F /* Info.plist */,
+			);
+			path = sispopnetTests;
+			sourceTree = "<group>";
+		};
+		7BED5B96232D78DB00DF603F /* sispopnetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7BED5B97232D78DB00DF603F /* sispopnetUITests.swift */,
+				7BED5B99232D78DB00DF603F /* Info.plist */,
+			);
+			path = sispopnetUITests;
+			sourceTree = "<group>";
+		};
+		7BED5BA9232E993E00DF603F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7BED5B75232D78D900DF603F /* sispopnet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BED5B9C232D78DB00DF603F /* Build configuration list for PBXNativeTarget "sispopnet" */;
+			buildPhases = (
+				7BED5B72232D78D900DF603F /* Sources */,
+				7BED5B73232D78D900DF603F /* Frameworks */,
+				7BED5B74232D78D900DF603F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sispopnet;
+			productName = sispopnet;
+			productReference = 7BED5B76232D78D900DF603F /* sispopnet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7BED5B87232D78DB00DF603F /* sispopnetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BED5B9F232D78DB00DF603F /* Build configuration list for PBXNativeTarget "sispopnetTests" */;
+			buildPhases = (
+				7BED5B84232D78DB00DF603F /* Sources */,
+				7BED5B85232D78DB00DF603F /* Frameworks */,
+				7BED5B86232D78DB00DF603F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7BED5B8A232D78DB00DF603F /* PBXTargetDependency */,
+			);
+			name = sispopnetTests;
+			productName = sispopnetTests;
+			productReference = 7BED5B88232D78DB00DF603F /* sispopnetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7BED5B92232D78DB00DF603F /* sispopnetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BED5BA2232D78DB00DF603F /* Build configuration list for PBXNativeTarget "sispopnetUITests" */;
+			buildPhases = (
+				7BED5B8F232D78DB00DF603F /* Sources */,
+				7BED5B90232D78DB00DF603F /* Frameworks */,
+				7BED5B91232D78DB00DF603F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7BED5B95232D78DB00DF603F /* PBXTargetDependency */,
+			);
+			name = sispopnetUITests;
+			productName = sispopnetUITests;
+			productReference = 7BED5B93232D78DB00DF603F /* sispopnetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BED5B6E232D78D900DF603F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Sispop;
+				TargetAttributes = {
+					7BED5B75232D78D900DF603F = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 0;
+							};
+							com.apple.NetworkExtensions = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					7BED5B87232D78DB00DF603F = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 7BED5B75232D78D900DF603F;
+					};
+					7BED5B92232D78DB00DF603F = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 7BED5B75232D78D900DF603F;
+					};
+				};
+			};
+			buildConfigurationList = 7BED5B71232D78D900DF603F /* Build configuration list for PBXProject "sispopnet" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7BED5B6D232D78D900DF603F;
+			productRefGroup = 7BED5B77232D78D900DF603F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BED5B75232D78D900DF603F /* sispopnet */,
+				7BED5B87232D78DB00DF603F /* sispopnetTests */,
+				7BED5B92232D78DB00DF603F /* sispopnetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BED5B74232D78D900DF603F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BED5B7E232D78DB00DF603F /* Assets.xcassets in Resources */,
+				7BED5B81232D78DB00DF603F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BED5B86232D78DB00DF603F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BED5B91232D78DB00DF603F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BED5B72232D78D900DF603F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BED5BA8232E831B00DF603F /* StreamReader.swift in Sources */,
+				7BA4FB7023411FF60098E20A /* PrefsViewController.swift in Sources */,
+				7BED5BA6232E7E6600DF603F /* SispopnetLog.swift in Sources */,
+				7BA4FB662340DA820098E20A /* StatusMenuExt.swift in Sources */,
+				7B28BD1A232EA8B40073B955 /* DNSManager.swift in Sources */,
+				7B28BD1C232EB6EF0073B955 /* SispopnetRunner.swift in Sources */,
+				7BA4FB6C2340F2270098E20A /* WindowsManager.swift in Sources */,
+				7BA4FB7323412D700098E20A /* Interfaces.swift in Sources */,
+				7BA4FB642340D5940098E20A /* Preferences.swift in Sources */,
+				7BED5B7A232D78D900DF603F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BED5B84232D78DB00DF603F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BED5B8D232D78DB00DF603F /* sispopnetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BED5B8F232D78DB00DF603F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BED5B98232D78DB00DF603F /* sispopnetUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7BED5B8A232D78DB00DF603F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BED5B75232D78D900DF603F /* sispopnet */;
+			targetProxy = 7BED5B89232D78DB00DF603F /* PBXContainerItemProxy */;
+		};
+		7BED5B95232D78DB00DF603F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BED5B75232D78D900DF603F /* sispopnet */;
+			targetProxy = 7BED5B94232D78DB00DF603F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7BED5B7F232D78DB00DF603F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BED5B80232D78DB00DF603F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7BED5B9A232D78DB00DF603F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 23TKR8Q2XE;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7BED5B9B232D78DB00DF603F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 23TKR8Q2XE;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		7BED5B9D232D78DB00DF603F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = sispopnet/sispopnet.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 23TKR8Q2XE;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = sispopnet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = sispop.sispopnet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7BED5B9E232D78DB00DF603F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = sispopnet/sispopnet.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 23TKR8Q2XE;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = sispopnet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = sispop.sispopnet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		7BED5BA0232D78DB00DF603F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = sispopnetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sispop.sispopnetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sispopnet.app/Contents/MacOS/sispopnet";
+			};
+			name = Debug;
+		};
+		7BED5BA1232D78DB00DF603F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = sispopnetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sispop.sispopnetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sispopnet.app/Contents/MacOS/sispopnet";
+			};
+			name = Release;
+		};
+		7BED5BA3232D78DB00DF603F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = sispopnetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sispop.sispopnetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = sispopnet;
+			};
+			name = Debug;
+		};
+		7BED5BA4232D78DB00DF603F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = sispopnetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sispop.sispopnetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = sispopnet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BED5B71232D78D900DF603F /* Build configuration list for PBXProject "sispopnet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BED5B9A232D78DB00DF603F /* Debug */,
+				7BED5B9B232D78DB00DF603F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BED5B9C232D78DB00DF603F /* Build configuration list for PBXNativeTarget "sispopnet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BED5B9D232D78DB00DF603F /* Debug */,
+				7BED5B9E232D78DB00DF603F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BED5B9F232D78DB00DF603F /* Build configuration list for PBXNativeTarget "sispopnetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BED5BA0232D78DB00DF603F /* Debug */,
+				7BED5BA1232D78DB00DF603F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BED5BA2232D78DB00DF603F /* Build configuration list for PBXNativeTarget "sispopnetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BED5BA3232D78DB00DF603F /* Debug */,
+				7BED5BA4232D78DB00DF603F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7BED5B6E232D78D900DF603F /* Project object */;
+}

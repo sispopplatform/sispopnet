@@ -1,5 +1,5 @@
 # Basic definitions
-set(LIB lokinet)
+set(LIB sispopnet)
 set(SHARED_LIB ${LIB}-shared)
 set(STATIC_LIB ${LIB}-static)
 set(CRYPTOGRAPHY_LIB ${LIB}-cryptography)

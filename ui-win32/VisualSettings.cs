@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace network.loki.lokinet.win32.ui
+namespace network.sispop.sispopnet.win32.ui
 {
     public partial class VisualSettings : Form
     {

@@ -1,7 +1,7 @@
-mkdir loki$1
-cd loki$1
-ln -s ../lokinet lokinet$1
-cp ../lokinet.ini .
-nano lokinet.ini
+mkdir sispop$1
+cd sispop$1
+ln -s ../sispopnet sispopnet$1
+cp ../sispopnet.ini .
+nano sispopnet.ini
 cd ..
-echo "killall -9 lokinet$1" >> ../stop.sh
+echo "killall -9 sispopnet$1" >> ../stop.sh

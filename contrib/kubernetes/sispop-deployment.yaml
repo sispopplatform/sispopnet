@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sispop-deployment
+  labels:
+    app: sispop-svc-node
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sispop-svc-node
+  template:
+    metadata:
+      labels:
+        app: sispop-svc-node
+    spec:
+      containers:
+      - name: sispop-svc-node
+        image: jaaff/sispop-svc-kubernetes
+        ports:
+          - protocol: TCP
+            port: 22022
+            targetPort: 22022
+          - protocol: TCP
+            port: 22023
+            targetPort: 22023
+          - protocol: UDP
+            port: 1090
+            targetPort: 1090
+          

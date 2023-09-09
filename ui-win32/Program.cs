@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace network.loki.lokinet.win32.ui
+namespace network.sispop.sispopnet.win32.ui
 {
     static class Program
     {
@@ -15,9 +15,9 @@ namespace network.loki.lokinet.win32.ui
         [STAThread]
         static void Main()
         {
-            // Scrub any old lokinet process left behind
-            Mutex m = new Mutex(true, "lokinet_dotnet_ui");
-            Process[] old_pids = Process.GetProcessesByName("lokinet");
+            // Scrub any old sispopnet process left behind
+            Mutex m = new Mutex(true, "sispopnet_dotnet_ui");
+            Process[] old_pids = Process.GetProcessesByName("sispopnet");
             foreach (Process pid in old_pids)
             {
                 try
@@ -31,7 +31,7 @@ namespace network.loki.lokinet.win32.ui
             Application.Run(new main_frame());
             try
             {
-                main_frame.lokiNetDaemon.Kill();
+                main_frame.sispopNetDaemon.Kill();
             }
             catch
             { }

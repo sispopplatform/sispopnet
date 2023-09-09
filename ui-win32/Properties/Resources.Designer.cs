@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace network.loki.lokinet.win32.ui.Properties {
+namespace network.sispop.sispopnet.win32.ui.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace network.loki.lokinet.win32.ui.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("network.loki.lokinet.win32.ui.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("network.sispop.sispopnet.win32.ui.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

@@ -45,7 +45,7 @@ namespace llarp
       whitelistRouters.emplace(router);
     }
 
-    LogInfo("lokinet service node list now has ", whitelistRouters.size(),
+    LogInfo("sispopnet service node list now has ", whitelistRouters.size(),
             " routers");
   }
 

@@ -935,7 +935,7 @@ namespace llarp
     while(num < 255)
     {
       std::stringstream ifname_ss;
-      ifname_ss << "lokitun" << num;
+      ifname_ss << "sispoptun" << num;
       std::string iftestname = ifname_ss.str();
       struct sockaddr addr;
       bool found = llarp_getifaddr(iftestname.c_str(), AF_INET, &addr);
@@ -949,16 +949,16 @@ namespace llarp
     }
     if(num == 255)
     {
-      llarp::LogError("Could not find any free lokitun interface names");
+      llarp::LogError("Could not find any free sispoptun interface names");
       return "";
     }
-// include lokitun prefix to communicate result is valid
+// include sispoptun prefix to communicate result is valid
 #if defined(ANDROID) || defined(RPI)
     char buff[IFNAMSIZ + 1] = {0};
-    snprintf(buff, sizeof(buff), "lokitun%u", num);
+    snprintf(buff, sizeof(buff), "sispoptun%u", num);
     return buff;
 #else
-    return "lokitun" + std::to_string(num);
+    return "sispoptun" + std::to_string(num);
 #endif
   }
 

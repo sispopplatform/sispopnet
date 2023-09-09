@@ -1,24 +1,24 @@
 {
-  "name": "lokinet-monitor",
+  "name": "sispopnet-monitor",
   "version": "0.0.1",
-  "description": "Lokinet monitor",
+  "description": "Sispopnet monitor",
   "main": "monitor_client.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/loki-project/loki-network.git"
+    "url": "git+https://github.com/sispop-project/sispop-network.git"
   },
   "keywords": [
-    "lokinet"
+    "sispopnet"
   ],
   "author": "Ryan Tharp",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/loki-project/loki-network/issues"
+    "url": "https://github.com/sispop-project/sispop-network/issues"
   },
-  "homepage": "https://github.com/loki-project/loki-network#readme",
+  "homepage": "https://github.com/sispop-project/sispop-network#readme",
   "dependencies": {
     "net-ping": "^1.2.3"
   }

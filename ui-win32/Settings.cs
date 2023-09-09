@@ -1,4 +1,4 @@
-﻿namespace network.loki.lokinet.win32.ui.Properties {
+﻿namespace network.sispop.sispopnet.win32.ui.Properties {
     
     
     // This class allows you to handle specific events on the settings class:

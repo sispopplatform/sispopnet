@@ -1,23 +1,23 @@
-# Lokinet
+# Sispopnet
 
 [Español](readme_es.md)
 
-Lokinet is the reference implementation of LLARP (low latency anonymous routing protocol), a layer 3 onion routing protocol.
+Sispopnet is the reference implementation of LLARP (low latency anonymous routing protocol), a layer 3 onion routing protocol.
 
 You can learn more about the high level design of LLARP [here](docs/high-level.txt)
 
 And you can read the LLARP protocol specification [here](docs/proto_v0.txt)
 
-You can view documentation on how to get started [here](https://loki-project.github.io/loki-docs/Lokinet/LokinetOverview/) .
+You can view documentation on how to get started [here](https://sispop-project.github.io/sispop-docs/Sispopnet/SispopnetOverview/) .
 
-![build status](https://gitlab.com/lokiproject/loki-network/badges/master/pipeline.svg "build status")
-![travis-ci](https://travis-ci.org/loki-project/loki-network.svg?branch=master "ci status")
+![build status](https://gitlab.com/sispopproject/sispop-network/badges/master/pipeline.svg "build status")
+![travis-ci](https://travis-ci.org/sispop-project/sispop-network.svg?branch=master "ci status")
 
 ## Usage
 
-See the [documentation](https://loki-project.github.io/loki-docs/Lokinet/LokinetOverview/) on how to get started.
+See the [documentation](https://sispop-project.github.io/sispop-docs/Sispopnet/SispopnetOverview/) on how to get started.
 
-Also read the [Public Testing Guide](https://lokidocs.com/Lokinet/Guides/PublicTestingGuide/#1-lokinet-installation) for installation and other helpful information.
+Also read the [Public Testing Guide](https://sispopdocs.com/Sispopnet/Guides/PublicTestingGuide/#1-sispopnet-installation) for installation and other helpful information.
 
 ## Running on Linux
 
@@ -25,40 +25,40 @@ Also read the [Public Testing Guide](https://lokidocs.com/Lokinet/Guides/PublicT
 
 to run as client:
 
-    $ lokinet -g
-    $ lokinet-bootstrap
-    $ lokinet
+    $ sispopnet -g
+    $ sispopnet-bootstrap
+    $ sispopnet
 
 to run as relay:
 
-    $ lokinet -r -g
-    $ lokinet-bootstrap
-    $ lokinet
+    $ sispopnet -r -g
+    $ sispopnet-bootstrap
+    $ sispopnet
 
 ## Running on MacOS/UNIX/BSD
 
 **YOU HAVE TO RUN AS ROOT**, run using sudo. Elevated privileges are needed to create the virtual tunnel interface.
 
-The MacOS installer places the normal binaries (`lokinet` and `lokinet-bootstrap`) in `/usr/local/bin` which should be in your path, so you can easily use the binaries from your terminal. The installer also nukes your previous config and keys and sets up a fresh config and downloads the latest bootstrap seed.
+The MacOS installer places the normal binaries (`sispopnet` and `sispopnet-bootstrap`) in `/usr/local/bin` which should be in your path, so you can easily use the binaries from your terminal. The installer also nukes your previous config and keys and sets up a fresh config and downloads the latest bootstrap seed.
 
 to run as client:
 
-    $ lokinet -g
-    $ lokinet-bootstrap
-    $ sudo lokinet
+    $ sispopnet -g
+    $ sispopnet-bootstrap
+    $ sudo sispopnet
 
 to run as relay:
 
-    $ lokinet -r -g
-    $ lokinet-bootstrap
-    $ sudo lokinet
+    $ sispopnet -r -g
+    $ sispopnet-bootstrap
+    $ sudo sispopnet
 
 
 ## Running on Windows
 
 **DO NOT RUN AS ELEVATED USER**, run as normal user.
 
-to run as client, run the `run-lokinet.bat` batch file as your normal user.
+to run as client, run the `run-sispopnet.bat` batch file as your normal user.
 
 
 ## Building
@@ -78,8 +78,8 @@ Build requirements:
 build:
 
     $ sudo apt install build-essential cmake git libcap-dev curl libuv1-dev libsodium-dev libcurl4-openssl-dev pkg-config
-    $ git clone https://github.com/loki-project/loki-network
-    $ cd loki-network
+    $ git clone https://github.com/sispop-project/sispop-network
+    $ cd sispop-network
     $ make 
 
 install:
@@ -109,8 +109,8 @@ cross compile fully static armhf (rpi 2 and up)
 build:
     make sure you have cmake, libuv and xcode command line tools installed
     
-    $ git clone https://github.com/loki-project/loki-network
-    $ cd loki-network
+    $ git clone https://github.com/sispop-project/sispop-network
+    $ cd sispop-network
     $ make -j8
 
 install:
@@ -122,12 +122,12 @@ install:
 build (where `$ARCH` is your platform - `i686` or `x86_64`):
 
     $ pacman -Sy base-devel mingw-w64-$ARCH-toolchain git libtool autoconf mingw-w64-$ARCH-cmake
-    $ git clone https://github.com/loki-project/loki-network.git
-    $ cd loki-network
+    $ git clone https://github.com/sispop-project/sispop-network.git
+    $ cd sispop-network
     $ mkdir -p build; cd build
     $ cmake .. -DCMAKE_BUILD_TYPE=[Debug|Release] -DSTATIC_LINK_RUNTIME=ON -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ -G 'Unix Makefiles'
 
-install (elevated) to `$PROGRAMFILES/lokinet` or `$ProgramFiles(x86)/lokinet`:
+install (elevated) to `$PROGRAMFILES/sispopnet` or `$ProgramFiles(x86)/sispopnet`:
 
     $ make install
 
@@ -152,8 +152,8 @@ build:
     $ sudo pkg install build-essential gcc8 wget tuntap cmake (optional: ninja ccache - from omnios extra) (OmniOS CE)
     $ sudo pkg install base-developer-utilities developer-gnu developer-studio-utilities gcc-7 wget cmake (Oracle Solaris, see note)
     $ sudo pkg install build-essential wget gcc-8 documentation/tuntap header-tun tun (optional: ninja ccache) (all other SunOS)
-    $ git clone https://github.com/loki-project/loki-network
-    $ cd loki-network
+    $ git clone https://github.com/sispop-project/sispop-network
+    $ cd sispop-network
     $ gmake -j8
 
 install:
@@ -170,8 +170,8 @@ TODO: add pkgsrc instructions
 build:
 
     # pkg_add curl cmake git (optional: ninja ccache)
-    $ git clone https://github.com/loki-project/loki-network
-    $ cd loki-network
+    $ git clone https://github.com/sispop-project/sispop-network
+    $ cd sispop-network
     $ gmake -j8
 
 install (root):
@@ -183,8 +183,8 @@ install (root):
 build:
 
     $ pkg install cmake git curl libuv libsodium pkgconf
-    $ git clone https://github.com/loki-project/loki-network
-    $ cd loki-network
+    $ git clone https://github.com/sispop-project/sispop-network
+    $ cd sispop-network
     $ mkdir build
     $ cmake -DCMAKE_BUILD_TYPE=Release ..
     $ make

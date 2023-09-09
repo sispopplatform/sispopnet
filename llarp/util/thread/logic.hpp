@@ -61,7 +61,7 @@ namespace llarp
 }  // namespace llarp
 
 #ifndef LogicCall
-#if defined(LOKINET_DEBUG)
+#if defined(SISPOPNET_DEBUG)
 #ifdef LOG_TAG
 #define LogicCall(l, ...) l->_traceLogicCall(__VA_ARGS__, LOG_TAG, __LINE__)
 #else

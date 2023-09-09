@@ -10,13 +10,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Lokinet for Windows")]
-[assembly: AssemblyDescription("Lokinet end-user UI")]
+[assembly: AssemblyTitle("Sispopnet for Windows")]
+[assembly: AssemblyDescription("Sispopnet end-user UI")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Loki Project")]
-[assembly: AssemblyProduct("Lokinet Launcher")]
-[assembly: AssemblyCopyright("Copyright ©2018-2020 Loki Project. All rights reserved. See LICENSE for more details.")]
-[assembly: AssemblyTrademark("Loki, Loki Project, LokiNET are ™ & ©2018-2020 Loki Foundation")]
+[assembly: AssemblyCompany("Sispop Project")]
+[assembly: AssemblyProduct("Sispopnet Launcher")]
+[assembly: AssemblyCopyright("Copyright ©2018-2020 Sispop Project. All rights reserved. See LICENSE for more details.")]
+[assembly: AssemblyTrademark("Sispop, Sispop Project, SispopNET are ™ & ©2018-2020 Sispop Foundation")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible

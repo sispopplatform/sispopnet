@@ -40,9 +40,9 @@ vsproject/
 .vs
 
 daemon.ini
-lokinet-win32.exe
-lokinet
-lokinet.exe
+sispopnet-win32.exe
+sispopnet
+sispopnet.exe
 
 
 .gradle/
@@ -50,9 +50,9 @@ lokinet.exe
 .vscode
 build64/
 build2/
-/contrib/lokinet-bootstrap-winnt/cacert.pem
-/contrib/lokinet-bootstrap-winnt/data.enc
-/contrib/lokinet-bootstrap-winnt/out.bine
+/contrib/sispopnet-bootstrap-winnt/cacert.pem
+/contrib/sispopnet-bootstrap-winnt/data.enc
+/contrib/sispopnet-bootstrap-winnt/out.bine
 default.profraw
 
 # ctags shit
@@ -61,7 +61,7 @@ GRTAGS
 GPATH
 version.txt
 
-lokinet-bootstrap.exe
+sispopnet-bootstrap.exe
 regdbhelper.dll
 # xcode
 xcuserdata/

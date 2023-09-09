@@ -1,0 +1,14 @@
+[Unit]
+Description=SispopNET: Anonymous Network layer thingydoo.
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=debian-sispopnet
+SyslogIdentifier=sispopnet
+ExecStartPre=/bin/bash -c "/usr/bin/sispopnet-bootstrap && /usr/bin/sispopnet -g"
+ExecStart=/usr/bin/sispopnet
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

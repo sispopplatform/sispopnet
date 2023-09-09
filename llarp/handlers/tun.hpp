@@ -198,7 +198,7 @@ namespace llarp
       PacketQueue_t m_UserToNetworkPktQueue;
       /// queue for sending packets to user from network
       PacketQueue_t m_NetworkToUserPktQueue;
-      /// return true if we have a remote loki address for this ip address
+      /// return true if we have a remote sispop address for this ip address
       bool
       HasRemoteForIP(huint128_t ipv4) const;
 

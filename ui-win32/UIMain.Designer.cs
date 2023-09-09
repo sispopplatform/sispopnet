@@ -1,4 +1,4 @@
-﻿namespace network.loki.lokinet.win32.ui
+﻿namespace network.sispop.sispopnet.win32.ui
 {
     partial class main_frame
     {
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main_frame));
             this.StatusLabel = new System.Windows.Forms.Label();
-            this.lokinetd_fd1 = new System.Windows.Forms.TextBox();
+            this.sispopnetd_fd1 = new System.Windows.Forms.TextBox();
             this.NotificationTrayIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.TrayMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,31 +58,31 @@
             this.StatusLabel.TabIndex = 0;
             this.StatusLabel.Text = "[connection status]";
             // 
-            // lokinetd_fd1
+            // sispopnetd_fd1
             // 
-            this.lokinetd_fd1.AcceptsReturn = true;
-            this.lokinetd_fd1.AcceptsTab = true;
-            this.lokinetd_fd1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.sispopnetd_fd1.AcceptsReturn = true;
+            this.sispopnetd_fd1.AcceptsTab = true;
+            this.sispopnetd_fd1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lokinetd_fd1.BackColor = System.Drawing.SystemColors.InfoText;
-            this.lokinetd_fd1.Font = new System.Drawing.Font("Iosevka Term Light", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lokinetd_fd1.ForeColor = System.Drawing.Color.Lime;
-            this.lokinetd_fd1.Location = new System.Drawing.Point(12, 39);
-            this.lokinetd_fd1.MaxLength = 0;
-            this.lokinetd_fd1.Multiline = true;
-            this.lokinetd_fd1.Name = "lokinetd_fd1";
-            this.lokinetd_fd1.ReadOnly = true;
-            this.lokinetd_fd1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.lokinetd_fd1.Size = new System.Drawing.Size(776, 330);
-            this.lokinetd_fd1.TabIndex = 1;
-            this.lokinetd_fd1.TextChanged += new System.EventHandler(this.lokinetd_fd1_TextChanged);
+            this.sispopnetd_fd1.BackColor = System.Drawing.SystemColors.InfoText;
+            this.sispopnetd_fd1.Font = new System.Drawing.Font("Iosevka Term Light", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sispopnetd_fd1.ForeColor = System.Drawing.Color.Lime;
+            this.sispopnetd_fd1.Location = new System.Drawing.Point(12, 39);
+            this.sispopnetd_fd1.MaxLength = 0;
+            this.sispopnetd_fd1.Multiline = true;
+            this.sispopnetd_fd1.Name = "sispopnetd_fd1";
+            this.sispopnetd_fd1.ReadOnly = true;
+            this.sispopnetd_fd1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.sispopnetd_fd1.Size = new System.Drawing.Size(776, 330);
+            this.sispopnetd_fd1.TabIndex = 1;
+            this.sispopnetd_fd1.TextChanged += new System.EventHandler(this.sispopnetd_fd1_TextChanged);
             // 
             // NotificationTrayIcon
             // 
             this.NotificationTrayIcon.ContextMenuStrip = this.TrayMenu;
             this.NotificationTrayIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("NotificationTrayIcon.Icon")));
-            this.NotificationTrayIcon.Text = "LokiNET - disconnected";
+            this.NotificationTrayIcon.Text = "SispopNET - disconnected";
             this.NotificationTrayIcon.Visible = true;
             this.NotificationTrayIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotificationTrayIcon_MouseDoubleClick);
             // 
@@ -217,13 +217,13 @@
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.UIVersionLabel);
             this.Controls.Add(this.btnHide);
-            this.Controls.Add(this.lokinetd_fd1);
+            this.Controls.Add(this.sispopnetd_fd1);
             this.Controls.Add(this.StatusLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "main_frame";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lokinet Launcher";
+            this.Text = "Sispopnet Launcher";
             this.TrayMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -239,7 +239,7 @@
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.Button btnDrop;
         private System.Windows.Forms.Button btnConfigProfile;
-        public System.Windows.Forms.TextBox lokinetd_fd1;
+        public System.Windows.Forms.TextBox sispopnetd_fd1;
         private System.Windows.Forms.Button btnAbout;
         private System.Windows.Forms.ContextMenuStrip TrayMenu;
         private System.Windows.Forms.ToolStripMenuItem TrayConnect;

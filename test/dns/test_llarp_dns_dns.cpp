@@ -12,7 +12,7 @@
 
 struct DNSLibTest : public ::testing::Test
 {
-  const std::string tld = ".loki";
+  const std::string tld = ".sispop";
   std::array< byte_t, 1500 > mem;
   llarp_buffer_t buf;
 
@@ -32,11 +32,11 @@ struct DNSLibTest : public ::testing::Test
 TEST_F(DNSLibTest, TestHasTLD)
 {
   llarp::dns::Question question;
-  question.qname = "a.loki.";
+  question.qname = "a.sispop.";
   ASSERT_TRUE(question.HasTLD(tld));
-  question.qname = "a.loki..";
+  question.qname = "a.sispop..";
   ASSERT_FALSE(question.HasTLD(tld));
-  question.qname = "bepis.loki.";
+  question.qname = "bepis.sispop.";
   ASSERT_TRUE(question.HasTLD(tld));
   question.qname = "bepis.logi.";
   ASSERT_FALSE(question.HasTLD(tld));

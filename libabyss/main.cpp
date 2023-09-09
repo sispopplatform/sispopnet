@@ -111,7 +111,7 @@ main(ABSL_ATTRIBUTE_UNUSED int argc, ABSL_ATTRIBUTE_UNUSED char* argv[])
   }
 #endif
 
-#ifdef LOKINET_DEBUG
+#ifdef SISPOPNET_DEBUG
   absl::SetMutexDeadlockDetectionMode(absl::OnDeadlockCycle::kAbort);
 #endif
   llarp::SetLogLevel(llarp::eLogDebug);

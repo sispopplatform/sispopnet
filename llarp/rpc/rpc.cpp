@@ -53,10 +53,10 @@ namespace llarp
       PopulateReqHeaders(abyss::http::Headers_t& hdr) override;
     };
 
-    struct LokiPingHandler final : public CallerHandler
+    struct SispopPingHandler final : public CallerHandler
     {
-      ~LokiPingHandler() override = default;
-      LokiPingHandler(::abyss::http::ConnImpl* impl, CallerImpl* parent)
+      ~SispopPingHandler() override = default;
+      SispopPingHandler(::abyss::http::ConnImpl* impl, CallerImpl* parent)
           : CallerHandler(impl, parent)
       {
       }
@@ -65,33 +65,33 @@ namespace llarp
       {
         if(not result.is_object())
         {
-          LogError("invalid result from lokid ping, not an object");
+          LogError("invalid result from sispopd ping, not an object");
           return false;
         }
         const auto itr = result.find("status");
         if(itr == result.end())
         {
-          LogError("invalid result from lokid ping, no result");
+          LogError("invalid result from sispopd ping, no result");
           return false;
         }
         if(not itr->is_string())
         {
-          LogError("invalid result from lokid ping, status not an string");
+          LogError("invalid result from sispopd ping, status not an string");
           return false;
         }
         const auto status = itr->get< std::string >();
         if(status != "OK")
         {
-          LogError("lokid ping failed: '", status, "'");
+          LogError("sispopd ping failed: '", status, "'");
           return false;
         }
-        LogInfo("lokid ping: '", status, "'");
+        LogInfo("sispopd ping: '", status, "'");
         return true;
       }
       void
       HandleError() override
       {
-        LogError("Failed to ping lokid");
+        LogError("Failed to ping sispopd");
       }
     };
 
@@ -147,7 +147,7 @@ namespace llarp
         }
         if(now >= m_NextPing)
         {
-          AsyncLokiPing();
+          AsyncSispopPing();
           m_NextPing = now + PingInterval;
         }
         Flush();
@@ -161,13 +161,13 @@ namespace llarp
       }
 
       void
-      AsyncLokiPing()
+      AsyncSispopPing()
       {
-        LogInfo("Pinging Lokid");
+        LogInfo("Pinging sispopd");
         nlohmann::json version(llarp::VERSION);
         nlohmann::json params({{"version", version}});
-        QueueRPC("lokinet_ping", std::move(params),
-                 util::memFn(&CallerImpl::NewLokinetPingConn, this));
+        QueueRPC("sispopnet_ping", std::move(params),
+                 util::memFn(&CallerImpl::NewSispopnetPingConn, this));
       }
 
       void
@@ -193,9 +193,9 @@ namespace llarp
       }
 
       abyss::http::IRPCClientHandler*
-      NewLokinetPingConn(abyss::http::ConnImpl* impl)
+      NewSispopnetPingConn(abyss::http::ConnImpl* impl)
       {
-        return new LokiPingHandler(impl, this);
+        return new SispopPingHandler(impl, this);
       }
 
       abyss::http::IRPCClientHandler*
@@ -230,7 +230,7 @@ namespace llarp
         handler({}, false);
         return false;
       }
-      // If lokid says tells us the block didn't change then nothing to do
+      // If sispopd says tells us the block didn't change then nothing to do
       const auto unchanged_it = result.find("unchanged");
       if(unchanged_it != result.end() and unchanged_it->get< bool >())
         return true;
@@ -280,7 +280,7 @@ namespace llarp
     void
     CallerHandler::PopulateReqHeaders(abyss::http::Headers_t& hdr)
     {
-      hdr.emplace("User-Agent", "lokinet rpc (YOLO)");
+      hdr.emplace("User-Agent", "sispopnet rpc (YOLO)");
     }
 
     struct Handler : public ::abyss::httpd::IRPCHandler

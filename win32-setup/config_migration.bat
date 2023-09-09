@@ -1,4 +1,4 @@
 @echo off
-copy lokinet.ini lokinet.old.ini
-del lokinet.ini
-%PROGRAMFILES%\Loki Project\Lokinet\lokinet -g
+copy sispopnet.ini sispopnet.old.ini
+del sispopnet.ini
+%PROGRAMFILES%\Sispop Project\Sispopnet\sispopnet -g

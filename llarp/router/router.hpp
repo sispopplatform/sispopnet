@@ -75,7 +75,7 @@ namespace llarp
     // our router contact
     RouterContact _rc;
 
-    /// are we using the lokid service node seed ?
+    /// are we using the sispopd service node seed ?
     bool usingSNSeed = false;
 
     /// should we obey the service node whitelist?
@@ -262,11 +262,11 @@ namespace llarp
     std::string rpcBindAddr = DefaultRPCBindAddr;
     const llarp_time_t _randomStartDelay;
 
-    /// lokid caller
+    /// sispopd caller
     std::unique_ptr< rpc::Caller > rpcCaller;
-    std::string lokidRPCAddr = "127.0.0.1:22023";
-    std::string lokidRPCUser;
-    std::string lokidRPCPassword;
+    std::string sispopdRPCAddr = "127.0.0.1:22023";
+    std::string sispopdRPCUser;
+    std::string sispopdRPCPassword;
 
     Profiling _routerProfiling;
     std::string routerProfilesFile = "profiles.dat";

@@ -8,13 +8,13 @@ WORKDIR /src/
 COPY . /src/
 
 RUN make NINJA=ninja STATIC_LINK=ON BUILD_TYPE=Release DOWNLOAD_SODIUM=ON
-RUN ./lokinet-bootstrap ${bootstrap}
+RUN ./sispopnet-bootstrap ${bootstrap}
 
 FROM alpine:latest
 
-COPY lokinet-docker.ini /root/.lokinet/lokinet.ini
-COPY --from=builder /src/build/daemon/lokinet .
-COPY --from=builder /root/.lokinet/bootstrap.signed /root/.lokinet/
+COPY sispopnet-docker.ini /root/.sispopnet/sispopnet.ini
+COPY --from=builder /src/build/daemon/sispopnet .
+COPY --from=builder /root/.sispopnet/bootstrap.signed /root/.sispopnet/
 
-CMD ["./lokinet"]
+CMD ["./sispopnet"]
 EXPOSE 1090/udp 1190/tcp

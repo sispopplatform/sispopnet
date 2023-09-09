@@ -35,7 +35,7 @@ namespace llarp
     KeyManager();
 
     /// Initializes keys using the provided config, loading from disk and/or
-    /// lokid via HTTP request.
+    /// sispopd via HTTP request.
     ///
     /// NOTE: Must be called prior to obtaining any keys.
     /// NOTE: blocks on I/O
@@ -74,10 +74,10 @@ namespace llarp
     std::atomic_bool m_initialized;
     std::atomic_bool m_needBackup;
 
-    bool m_usingLokid          = false;
-    std::string m_lokidRPCAddr = "127.0.0.1:22023";
-    std::string m_lokidRPCUser;
-    std::string m_lokidRPCPassword;
+    bool m_usingSispopd          = false;
+    std::string m_sispopdRPCAddr = "127.0.0.1:30000";
+    std::string m_sispopdRPCUser;
+    std::string m_sispopdRPCPassword;
 
     /// Backup each key file (by copying, e.g. foo -> foo.bak)
     bool
@@ -90,9 +90,9 @@ namespace llarp
     loadOrCreateKey(const std::string& filepath, llarp::SecretKey& key,
                     std::function< void(llarp::SecretKey& key) > keygen);
 
-    /// Requests the identity key from lokid via HTTP (curl)
+    /// Requests the identity key from sispopd via HTTP (curl)
     bool
-    loadIdentityFromLokid();
+    loadIdentityFromSispopd();
   };
 
 }  // namespace llarp

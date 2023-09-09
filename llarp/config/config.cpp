@@ -10,7 +10,7 @@
 #include <util/logging/logger.hpp>
 #include <util/mem.hpp>
 #include <util/str.hpp>
-#include <util/lokinet_init.h>
+#include <util/sispopnet_init.h>
 
 #include <cstdlib>
 #include <fstream>
@@ -20,11 +20,11 @@
 namespace llarp
 {
   const char *
-  lokinetEnv(string_view suffix)
+  sispopnetEnv(string_view suffix)
   {
     std::string env;
     env.reserve(8 + suffix.size());
-    env.append("LOKINET_"s);
+    env.append("SISPOPNET_"s);
     env.append(suffix.begin(), suffix.end());
     return std::getenv(env.c_str());
   }
@@ -32,7 +32,7 @@ namespace llarp
   std::string
   fromEnv(string_view val, string_view envNameSuffix)
   {
-    if(const char *ptr = lokinetEnv(envNameSuffix))
+    if(const char *ptr = sispopnetEnv(envNameSuffix))
       return ptr;
     return {val.begin(), val.end()};
   }
@@ -40,7 +40,7 @@ namespace llarp
   int
   fromEnv(const int &val, string_view envNameSuffix)
   {
-    if(const char *ptr = lokinetEnv(envNameSuffix))
+    if(const char *ptr = sispopnetEnv(envNameSuffix))
       return std::atoi(ptr);
     return val;
   }
@@ -48,7 +48,7 @@ namespace llarp
   uint16_t
   fromEnv(const uint16_t &val, string_view envNameSuffix)
   {
-    if(const char *ptr = lokinetEnv(envNameSuffix))
+    if(const char *ptr = sispopnetEnv(envNameSuffix))
       return std::atoi(ptr);
 
     return val;
@@ -57,7 +57,7 @@ namespace llarp
   size_t
   fromEnv(const size_t &val, string_view envNameSuffix)
   {
-    if(const char *ptr = lokinetEnv(envNameSuffix))
+    if(const char *ptr = sispopnetEnv(envNameSuffix))
       return std::atoll(ptr);
 
     return val;
@@ -66,7 +66,7 @@ namespace llarp
   nonstd::optional< bool >
   fromEnv(const nonstd::optional< bool > &val, string_view envNameSuffix)
   {
-    if(const char *ptr = lokinetEnv(envNameSuffix))
+    if(const char *ptr = sispopnetEnv(envNameSuffix))
       return IsTrueValue(ptr);
 
     return val;
@@ -358,7 +358,7 @@ namespace llarp
   }
 
   void
-  LokidConfig::fromSection(string_view key, string_view val)
+  SispopdConfig::fromSection(string_view key, string_view val)
   {
     if(key == "service-node-seed")
     {
@@ -371,15 +371,15 @@ namespace llarp
     }
     if(key == "jsonrpc" || key == "addr")
     {
-      lokidRPCAddr = str(val);
+      sispopdRPCAddr = str(val);
     }
     if(key == "username")
     {
-      lokidRPCUser = str(val);
+      sispopdRPCUser = str(val);
     }
     if(key == "password")
     {
-      lokidRPCPassword = str(val);
+      sispopdRPCPassword = str(val);
     }
   }
 
@@ -494,7 +494,7 @@ namespace llarp
   bool
   Config::parse(const ConfigParser &parser)
   {
-    if(Lokinet_INIT())
+    if(Sispopnet_INIT())
       return false;
     router    = find_section< RouterConfig >(parser, "router");
     network   = find_section< NetworkConfig >(parser, "network");
@@ -505,7 +505,7 @@ namespace llarp
     services  = find_section< ServicesConfig >(parser, "services");
     system    = find_section< SystemConfig >(parser, "system");
     api       = find_section< ApiConfig >(parser, "api");
-    lokid     = find_section< LokidConfig >(parser, "lokid");
+    sispopd     = find_section< SispopdConfig >(parser, "sispopd");
     bootstrap = find_section< BootstrapConfig >(parser, "bootstrap");
     logging   = find_section< LoggingConfig >(parser, "logging");
     return true;
@@ -519,13 +519,13 @@ namespace llarp
 #else
     const fs::path homedir = fs::path(getenv("HOME"));
 #endif
-    return homedir / fs::path(".lokinet");
+    return homedir / fs::path(".sispopnet");
   }
 
   fs::path
   GetDefaultConfigPath()
   {
-    return GetDefaultConfigDir() / "lokinet.ini";
+    return GetDefaultConfigDir() / "sispopnet.ini";
   }
 
 }  // namespace llarp
@@ -536,7 +536,7 @@ extern "C" bool
 llarp_ensure_config(const char *fname, const char *basedir, bool overwrite,
                     bool asRouter)
 {
-  if(Lokinet_INIT())
+  if(Sispopnet_INIT())
     return false;
   std::error_code ec;
   if(fs::exists(fname, ec) && !overwrite)
@@ -618,9 +618,9 @@ llarp_generic_ensure_config(std::ofstream &f, std::string basepath,
   f << "# encryption key for onion routing\n";
   f << "encryption-privkey=" << basepath << "encryption.private\n";
   f << std::endl;
-  f << "# uncomment following line to set router nickname to 'lokinet'"
+  f << "# uncomment following line to set router nickname to 'sispopnet'"
     << std::endl;
-  f << "#nickname=lokinet\n";
+  f << "#nickname=sispopnet\n";
   const auto limits = isRouter ? llarp::limits::snode : llarp::limits::client;
 
   f << "# maintain min connections to other routers\n";
@@ -652,9 +652,9 @@ llarp_generic_ensure_config(std::ofstream &f, std::string basepath,
 
   f << "# system settings for privileges and such\n";
   f << "[system]\n";
-  f << "user=" << DEFAULT_LOKINET_USER << std::endl;
-  f << "group=" << DEFAULT_LOKINET_GROUP << std::endl;
-  f << "pidfile=" << basepath << "lokinet.pid\n";
+  f << "user=" << DEFAULT_SISPOPNET_USER << std::endl;
+  f << "group=" << DEFAULT_SISPOPNET_GROUP << std::endl;
+  f << "pidfile=" << basepath << "sispopnet.pid\n";
   f << "\n\n";
 
   f << "# dns provider configuration section\n";
@@ -697,10 +697,10 @@ llarp_generic_ensure_config(std::ofstream &f, std::string basepath,
 void
 llarp_ensure_router_config(std::ofstream &f, std::string basepath)
 {
-  f << "# lokid settings (disabled by default)\n";
-  f << "[lokid]\n";
+  f << "# sispopd settings (disabled by default)\n";
+  f << "[sispopd]\n";
   f << "enabled=false\n";
-  f << "jsonrpc=127.0.0.1:22023\n";
+  f << "jsonrpc=127.0.0.1:30000\n";
   f << "#service-node-seed=/path/to/servicenode/seed\n";
   f << std::endl;
   f << "# network settings \n";
@@ -756,14 +756,14 @@ llarp_ensure_client_config(std::ofstream &f, std::string basepath)
       if(ip == "")
       {
         llarp::LogError(
-            "Couldn't easily detect a private range to map lokinet onto");
+            "Couldn't easily detect a private range to map sispopnet onto");
         return false;
       }
      */
       example_f << "# this is an example configuration for a snapp\n";
       example_f << "[example-snapp]\n";
       example_f << "# keyfile is the path to the private key of the snapp, "
-                   "your .loki is tied to this key, DON'T LOSE IT\n";
+                   "your .sispop is tied to this key, DON'T LOSE IT\n";
       example_f << "keyfile=" << basepath << "example-snap-keyfile.private\n";
       example_f << "# ifaddr is the ip range to allocate to this snapp\n";
       example_f << "ifaddr=" << ip << std::endl;
