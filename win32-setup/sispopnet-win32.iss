@@ -4,7 +4,7 @@
 #define MyAppName "Sispopnet"
 #define MyAppVersion "0.7.0"
 #define MyAppPublisher "Sispop Project"
-#define MyAppURL "https://sispopnet.org"
+#define MyAppURL "https://net.sispop.site"
 #define MyAppExeName "sispopnetui.exe"
 ; change this to avoid compiler errors  -despair
 #ifndef DevPath
@@ -214,7 +214,7 @@ Filename: "{tmp}\7z.exe"; Parameters: "x tuntapv9.7z"; WorkingDir: "{app}"; Flag
 Filename: "{tmp}\7z.exe"; Parameters: "x tuntapv9_n6.7z"; WorkingDir: "{app}"; Flags: runascurrentuser waituntilterminated skipifdoesntexist; Description: "extract TUN/TAP-v9 driver"; StatusMsg: "Extracting driver..."; MinVersion: 0, 6.0
 Filename: "{tmp}\7z.exe"; Parameters: "x inet6.7z"; WorkingDir: "{app}"; Flags: skipifdoesntexist runascurrentuser waituntilterminated skipifdoesntexist; Description: "extract inet6 driver"; StatusMsg: "Extracting IPv6 driver..."; MinVersion: 0, 5.0; OnlyBelowVersion: 0, 5.1
 Filename: "{tmp}\7z.exe"; Parameters: "x sispopnet-qt5-ui.7z -aoa"; WorkingDir: "{app}"; Flags: runascurrentuser waituntilterminated skipifdoesntexist; Description: "installing modern Qt5 UI"; StatusMsg: "Installing modern Qt5 UI..."; MinVersion: 0, 6.0;
-Filename: "{app}\sispopnet-bootstrap.exe"; Parameters:"-L https://seed.sispopnet.org/sispopnet.signed --cacert rootcerts.pem -o ""{userappdata}\.sispopnet\bootstrap.signed"""; WorkingDir: "{app}"; Flags: runascurrentuser waituntilterminated; Description: "bootstrap dht"; StatusMsg: "Downloading initial RC..."
+Filename: "{app}\sispopnet-bootstrap.exe"; Parameters:"-L https://seed.sispop.site/sispopnet.signed --cacert rootcerts.pem -o ""{userappdata}\.sispopnet\bootstrap.signed"""; WorkingDir: "{app}"; Flags: runascurrentuser waituntilterminated; Description: "bootstrap dht"; StatusMsg: "Downloading initial RC..."
 ; then ask to install drivers
 Filename: "{app}\tap-windows-9.9.2\install.bat"; WorkingDir: "{app}\tap-windows-9.9.2\"; Flags: runascurrentuser waituntilterminated skipifdoesntexist; Description: "Install TUN/TAP-v9 driver"; StatusMsg: "Installing driver..."; OnlyBelowVersion: 0, 6.0; Check: not IsTapInstalled
 Filename: "{app}\tap-windows-9.21.2\install.bat"; WorkingDir: "{app}\tap-windows-9.21.2\"; Flags: runascurrentuser waituntilterminated skipifdoesntexist; Description: "Install TUN/TAP-v9 driver"; StatusMsg: "Installing driver..."; MinVersion: 0, 6.0; Check: not IsTapInstalled

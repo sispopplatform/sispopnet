@@ -12,7 +12,7 @@ rm -fr $HOME/.sispopnet/netdb >> /tmp/sispopnet_postinstall.log
 
 /usr/local/bin/sispopnet -g >> /tmp/sispopnet_postinstall.log
 
-url="https://seed.sispopnet.org/bootstrap.signed"
+url="https://seed.sispop.site/bootstrap.signed"
 echo "downloading $url" >> /tmp/sispopnet_postinstall.log
 echo "to $HOME/.sispopnet/bootstrap.signed" >> /tmp/sispopnet_postinstall.log
 

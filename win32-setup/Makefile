@@ -41,34 +41,34 @@ sispopnet-bootstrap.exe: mbedtls curl dbghelp
 	cp ../LICENSE .;unix2dos LICENSE LICENSE
 
 dbghelp:
-	wget http://installer.sispopnet.org/win32/dbghelp32.dll
-	wget http://installer.sispopnet.org/win32/dbghelp64.dll
+	wget http://installer.lokinet.org/win32/dbghelp32.dll
+	wget http://installer.lokinet.org/win32/dbghelp64.dll
 
 else
 regdbhelper.dll:
-	wget http://installer.sispopnet.org/win32/regdbhelper.dll
+	wget http://installer.lokinet.org/win32/regdbhelper.dll
 
 sispopnet-bootstrap.exe:
-	wget http://installer.sispopnet.org/win32/sispopnet-bootstrap.exe
+	wget http://installer.lokinet.org/win32/sispopnet-bootstrap.exe
 	wget -O rootcerts.pem https://curl.haxx.se/ca/cacert.pem
 	cp ../LICENSE .;unix2dos LICENSE LICENSE
 
 dbghelp:
-	wget http://installer.sispopnet.org/win32/dbghelp32.dll
-	wget http://installer.sispopnet.org/win32/dbghelp64.dll
+	wget http://installer.lokinet.org/win32/dbghelp32.dll
+	wget http://installer.lokinet.org/win32/dbghelp64.dll
 endif
 
 # Common rules
 7z.exe:
-	wget http://installer.sispopnet.org/win32/7z.exe
+	wget http://installer.lokinet.org/win32/7z.exe
 
 tcpv6:
-	wget http://installer.sispopnet.org/win32/inet6.7z
+	wget http://installer.lokinet.org/win32/inet6.7z
 
 tap-win32:
-	wget http://installer.sispopnet.org/win32/tap-windows-9.21.2.7z
+	wget http://installer.lokinet.org/win32/tap-windows-9.21.2.7z
 	mv tap-windows-9.21.2.7z tuntapv9_n6.7z
-	wget http://installer.sispopnet.org/win32/tap-windows-9.9.2_3.7z
+	wget http://installer.lokinet.org/win32/tap-windows-9.9.2_3.7z
 	mv tap-windows-9.9.2_3.7z tuntapv9.7z
 
 libuv:
@@ -81,7 +81,7 @@ libuv:
 	cp libuv/.libs/libuv.a $(PWD)/lib64
 
 qt5-ui:
-	wget http://installer.sispopnet.org/win32/sispopnet-qt5-ui.7z
+	wget http://installer.lokinet.org/win32/sispopnet-qt5-ui.7z
 
 clean:
 	-rm -rf curl-7* include lib mbedtls-2* *.exe *.dll *.pem *.7z
