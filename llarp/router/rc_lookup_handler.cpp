@@ -238,11 +238,8 @@ namespace llarp
   RCLookupHandler::ExploreNetwork()
   {
     const size_t known = _nodedb->num_loaded();
-    if(_bootstrapRCList.empty() && known == 0)
-    {
-      LogError("we have no bootstrap nodes specified");
-    }
-    else if(known <= _bootstrapRCList.size())
+
+    if(known <= _bootstrapRCList.size())
     {
       for(const auto &rc : _bootstrapRCList)
       {

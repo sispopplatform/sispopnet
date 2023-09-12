@@ -412,11 +412,7 @@ namespace llarp
         {
           --tries;
         }
-        if(tries == 0 || hops[idx].pubkey.IsZero())
-        {
-          LogWarn(Name(), " failed to select hop ", idx);
-          return false;
-        }
+
         exclude.emplace(hops[idx].pubkey);
       }
       return true;
